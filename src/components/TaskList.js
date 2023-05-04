@@ -9,7 +9,7 @@ const TaskList = ({taskList, removeTask}) => {
       <ul role='list'>
         {taskList.map((task, index)=> {
           return (
-            <li className='padding-3 fs-300' id={index} key={index} >
+            <li className='padding-3 fs-300' id={index} key={task} >
               <div>
               <input type="checkbox" />
               <p> {task} </p>

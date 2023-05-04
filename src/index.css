@@ -166,6 +166,11 @@ li > * {
 
 li:first-child {
   flex-grow: 3;
+  flex-wrap: wrap;
+}
+
+li:hover {
+  background-color:  rgba(245, 245, 245, 0.1);
 }
 
 @media (min-width: 45em) {
@@ -184,7 +189,9 @@ li:first-child {
   color: rgb(226, 44, 44);
 }
 
-/* input[type='checkbox']:checked > li {
-  
-} */
+li:has(* > input[type='checkbox']:checked) {
+  background-color:  rgba(245, 245, 245, 0.3);
+  opacity: 0.4;
+
+}
 

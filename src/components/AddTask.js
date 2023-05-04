@@ -9,22 +9,29 @@ const AddTask = ({task, setTask}) => {
   }
 
   const addTask = () => {
-    settaskList([...taskList, task]);
-    setTask("")
+    if (taskList.includes(task)) {
+      window.alert('You already have this task..')
+    } else {
+      settaskList([...taskList, task]);
+      setTask("")
+    }
   }
 
   const removeTask = (id) => {
     // console.log(index);
     const newList = taskList.filter((val, index) => index != id )
     settaskList(newList);
-    console.log(id);
-    console.log(taskList);
   }
 
   const isEnter = (e) => {
     if (e.keyCode == 13) {
-      settaskList([...taskList, task]);
-      setTask("")
+      // copy code of addTask arrow function.
+      if (taskList.includes(task)) {
+        window.alert('You already have this task..')
+      } else {
+        settaskList([...taskList, task]);
+        setTask("")
+      }
     }
   }
 
