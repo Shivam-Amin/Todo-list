@@ -18,7 +18,7 @@ const AddTask = ({task, setTask}) => {
   const handleTask = (e) => {
     setTask(e.target.value)
   }
-// ===
+
   const addTask = () => {
     if (taskList.includes(task)) {
       window.alert('You already have this task..')
