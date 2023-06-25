@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TaskList from './TaskList'
 
 const AddTask = ({task, setTask}) => {
-  const [taskList, settaskList] = useState([]);
+
+  // If local storage has tasks to it then get the tasks or return []
+  const [taskList, settaskList] = useState(() => {
+    const data = localStorage.getItem("tasks");
+    const initialValue = JSON.parse(data);
+    return initialValue || []
+  });
+
+  // Store the tasks whenever the taskList is changed...
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(taskList))
+  }, [taskList])
   
   const handleTask = (e) => {
     setTask(e.target.value)
   }
-
+// ===
   const addTask = () => {
     if (taskList.includes(task)) {
       window.alert('You already have this task..')
@@ -19,12 +30,12 @@ const AddTask = ({task, setTask}) => {
 
   const removeTask = (id) => {
     // console.log(index);
-    const newList = taskList.filter((val, index) => index != id )
+    const newList = taskList.filter((val, index) => index !== id )
     settaskList(newList);
   }
 
   const isEnter = (e) => {
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       // copy code of addTask arrow function.
       if (taskList.includes(task)) {
         window.alert('You already have this task..')
