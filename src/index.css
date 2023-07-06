@@ -190,8 +190,7 @@ li:hover {
 }
 
 li:has(* > input[type='checkbox']:checked) {
-  background-color:  rgba(245, 245, 245, 0.3);
   opacity: 0.4;
-
+  text-decoration: line-through;
 }
 

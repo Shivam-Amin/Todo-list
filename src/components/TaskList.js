@@ -3,16 +3,18 @@ import { FiTrash } from 'react-icons/fi'
 
 
 const TaskList = ({taskList, removeTask}) => {
-  
+
   return (
     <div className='taskList'>
-      <ul role='list'>
-        {taskList.map((task, index)=> {
+      <ul role='listitem'>
+        {
+          (taskList.length !== 0) ?
+          (taskList.map((task, index)=> {
           return (
             <li className='padding-3 fs-300' id={index} key={task} >
               <div>
               <input type="checkbox" />
-              <p> {task} </p>
+                <p> {task} </p>
               </div>
 
               <div>
@@ -24,7 +26,12 @@ const TaskList = ({taskList, removeTask}) => {
               </div>
             </li>
           )
-        })}
+          })) :
+
+          (<li className='padding-3 fs-300' >
+            <p>No tasks added...</p>
+          </li>)
+        }
       </ul>
     </div>
   )
