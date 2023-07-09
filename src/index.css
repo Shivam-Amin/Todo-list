@@ -53,16 +53,17 @@ button:disabled {
 
 /* -------- Add Task ---------- */
 
-.addTask {
+.addTask > form {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
 
   margin: var(--size-200) var(--size-100);
 }
 
 @media (max-width: 45em) {
-  .addTask {
+  .addTask > form {
     margin: var(--size-100);
     justify-content: space-evenly;
   }
@@ -118,7 +119,7 @@ button:active {
 }
 
 @media (max-width: 45em) {
-  .addTask {
+  .addTask > form {
     height: 200px;
     flex-direction: column;
     justify-content: space-evenly;
