@@ -52,7 +52,7 @@ const AddTask = () => {
     setLoading(false);
   }, [refresh])
 
-  // if (!isAuth) return <Navigate to={'/login'} />
+  if (!isAuth) return <Navigate to={'/login'} />
 
   return (
     <>
