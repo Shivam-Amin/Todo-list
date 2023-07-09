@@ -63,16 +63,16 @@ picture {
 }
 
 
-.App {
+.container {
   width: 45rem;
-  min-height: 20rem;
+  min-height: 10rem;
   background: #333;
 
   color: whitesmoke;
   
   margin: 2rem auto;
-  padding: 1rem 1rem 2rem 1rem;
-  border-radius: 1.5rem;
+  padding: 1rem 1.6rem 2rem 1.6rem;
+  border-radius: 1rem;
 }
 
 hr {
@@ -81,7 +81,7 @@ hr {
 
 
 @media (max-width: 45em) {
-  .App {
+  .container {
     width: 22rem;
   }
 }

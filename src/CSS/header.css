@@ -1,0 +1,46 @@
+/* -------- Header ---------- */
+.logo {
+  width: 25px;
+  height: 25px;
+  margin: 14px 12px 0 1rem;
+}
+
+.Header {
+  width: 100%;
+  color: whitesmoke;
+  background-color: #333;
+  /* padding: 1rem 15rem ; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 0 5px rgb(86, 167, 254);
+}
+
+.Header div {
+  display: flex;
+  align-items: row;
+}
+
+.Header button {
+  margin-right: 3rem;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 45em) {
+  .Header button {
+    margin-right: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 22px;
+    height: 22px;
+    margin: 15px 5px 0 5px;
+  }
+  
+
+}

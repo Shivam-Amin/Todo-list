@@ -46,20 +46,8 @@ code {
     monospace;
 }
 
-/* -------- Header ---------- */
-.Header {
-  width: 100%;
-  text-align: center;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-  margin: 14px 1rem 0 0;
+button:disabled {
+  cursor: not-allowed;
 }
 
 
@@ -98,7 +86,8 @@ input[type='text'] {
   transition: 0.5s;
 }
 
-input[type='text']:is(:hover, :focus) {
+input[type='text']:is(:hover, :focus),
+input[type='password']:is(:hover, :focus) {
   background-color: rgba(245, 245, 245, 0.2);
   transition: 0.5s;
 }
